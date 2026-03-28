@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Odinproject_FirstJavascript</title>
+  <style>
+    input {
+      font-size: 2em;
+      margin: 10px 1px 0;
+    }
+
+    p:empty {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Functions in Java Script</h1>
+  <h2>Playing with Numbers</h2>
+  <input class="numberInput" type="text">
+  <input class="numberInput" type="text">
+  <p id="result1"></p>
+  <p id="result2"></p>
+
+  <br>
+
+  <h2>Playing with Strings</h2>
+  <input class="numberInput" type="text">
+  <input class="numberInput" type="text">
+  <p id="result3"></p>
+  <p id="result4"></p>
+
+  <script>
+    const inputs = document.querySelectorAll('.numberInput');
+    const input1 = inputs[0];
+    const input2 = inputs[1];
+    const input3 = inputs[2];
+    const input4 = inputs[3];
+
+    const paras = document.querySelectorAll('p');
+    const result1 = paras[0];
+    const result2 = paras[1];
+    const result3 = paras[2];
+    const result4 = paras[3];
+
+    function add(num1, num2){
+      return num1 + num2;
+    }
+
+    function multiply(num1, num2){
+      return num1 * num2;
+    }
+
+    function capitalize(str1){
+      return str1.toUpperCase();
+    }
+
+    function lastLetter(str2){
+      return str2.charAt(str2.length - 1);
+    }
+
+    input1.addEventListener("change", () => {
+      const num1 = parseFloat(input1.value);
+      const num2 = parseFloat(input2.value);
+
+      result1.textContent = `${num1} + ${num2} = ${add(num1, num2)}`;
+      }
+    );
+
+    input2.addEventListener("change", () => {
+      const num1 = parseFloat(input1.value);
+      const num2 = parseFloat(input2.value);
+
+      if (isNaN(num1) || isNaN(num2)) {
+        result2.textContent = "You need to enter two numbers!";
+      } else {
+        result2.textContent = `${num1} × ${num2} = ${multiply(num1, num2)}`;
+      }
+    });
+
+    input3.addEventListener("change", () => {
+      const str1 = input3.value;
+
+      if (str1 === "") {
+        result3.textContent = "";
+      } else {
+        result3.textContent = capitalize(str1);
+      }
+    });
+
+    input4.addEventListener("change", () => {
+      const str2 = input4.value;
+
+      if (str2 === "") {
+        result4.textContent = "";
+      } else {
+        result4.textContent = lastLetter(str2);
+      }
+    });
+  </script>
+</body>
+</html>
