@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card Quantity</title>
+  <style>
+    button {
+      background-color: rgb(208, 240, 28);
+      color: rgb(5, 5, 5);
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: rgb(147, 243, 20);
+    }
+    .red-button {
+      background-color: rgb(255, 153, 0);
+    }
+    .red-button:hover {
+      background-color: rgb(243, 189, 88);
+    }
+  </style>
+</head>
+<body>
+  <p>Online shop</p>
+  <p></p>
+  <button onclick="
+    console.log('Cart quantity: ' + cartQuantity);
+  " id="myButton" title="click">Show quantity</button>
+  <button onclick="
+    cartQuantity++;
+  console.log('Cart quantity: ' + cartQuantity);"
+  class="red-button">Add to cart</button>
+  <button onclick="
+    cartQuantity += 2;
+  console.log('Cart quantity: ' + cartQuantity);"class="red-button">+2</button>
+  <button onclick="
+    cartQuantity += 3;
+  console.log('Cart quantity: ' + cartQuantity);" class="red-button">+3</button>
+  <button onclick="
+    cartQuantity = 0;
+  console.log('Cart was reset.\n Cart quantity: ' + cartQuantity);" class="red-button">Reset Cart</button>
+  <script>
+    let cartQuantity = 0;
+
+  </script>
+</body>
+</html>

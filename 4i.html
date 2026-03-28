@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    button {
+      background-color: rgb(208, 240, 28);
+      color: white;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: rgb(147, 243, 20);
+    }
+    .red-button {
+      background-color: rgb(255, 153, 0);
+    }
+    .red-button:hover {
+      background-color: rgb(243, 189, 88);
+    }
+  </style>
+</head>
+<body>
+  <p>Adults Plain Cotton T-shirt</p>
+  <p>Price: $19.99</p>
+  <button id="myButton" title="click">Add to cart</button>
+  <button class="red-button" onclick="console.log('Loading...'); alert('Purchased')">Buy now</button>
+  <script>
+        let variable1 = 3;
+        let variable2 = 5;
+        let calculation = 2 + 2;
+        console.log(variable1 + variable2 + calculation);
+        console.log(20 + calculation);
+        let message =`Hi`;
+        alert(message);
+        variable1 = variable1+5;
+        variable2 = 20;
+        calculation = variable1 + variable2;
+        console.log(calculation);
+  </script>
+</body>
+</html>

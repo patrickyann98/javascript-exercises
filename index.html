@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: darkblue;
+        }
+        .red-button {
+            background-color: red;
+        }
+        .red-button:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello, World!</h1>
+    <button id="myButton" title="click">Click Me</button>
+    <p>Hello,<br> Franz!</p>
+    <p>Why don't you click here as well: <button class="red-button" onclick="alert('Hello from the red button!')">Red</button></p>
+    <script>
+      alert("Hello, World!");
+      // Add your JavaScript code here
+      console.log(typeof 12); // string
+      console.log("Welcome");
+    </script>
+</body>
+</html>

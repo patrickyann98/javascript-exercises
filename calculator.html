@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+    button {
+      background-color: rgb(238, 238, 235);
+      color: rgb(5, 5, 5);
+      padding: 10px 20px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: rgb(167, 168, 165);
+    }
+  </style>
+</head>
+<body>
+  <button
+    onclick="
+      calcVariable = 1;
+      console.log(calcVariable);
+    ">1
+  </button>
+  <button
+    onclick="
+      calcVariable = 2;
+      console.log(calcVariable);
+    ">2
+  </button>
+  <button
+    onclick="
+      calcVariable = 3;
+      console.log(calcVariable);
+    ">3
+  </button>
+  <button
+    onclick="
+      calcVariable = calcVariable + ;
+      console.log('Current value: ' + calcVariable);
+    ">+
+  </button>
+  <button
+    onclick="
+      calcVariable = eval(calcVariable);
+      console.log('Current value: ' + calcVariable);
+    ">=
+  </button>
+  <button
+    onclick="
+      calcVariable = 0;
+      console.log('Current value: ' + calcVariable);
+    ">Reset
+  </button>
+</body>
+<script>
+  let calcVariable = 0;
+  let calculation = '';
+</script>
+</html>
