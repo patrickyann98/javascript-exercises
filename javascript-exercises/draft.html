@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Draft</title>
+  <style>
+    body{
+      font-family: sans-serif;
+      font-size: 16px;
+    }
+    input {
+      margin: 0px;
+    }
+  </style>
+</head>
+<body>
+  <div id ="java"></div>
+  <h2>Enter a number</h2>
+  <input type="number" id="Input"></input>
+  <br>
+  <p id = "result"></p>
+  
+<script>
+  let input = document.getElementById("Input");
+  let result = document.getElementById("result");
+
+  input.addEventListener("input", function () {
+    let n = Number(input.value);
+    let output = "";
+
+    for (let i = 2; i <= n; i++) {
+      let isPrime = true;
+
+      for (let j = 2; j < i; j++) {
+        if (i % j === 0) {
+          isPrime = false;
+          break;
+        }
+      }
+
+      if (isPrime) {
+        output += i + " ";
+      }
+    }
+
+    result.textContent = output;
+  });
+  let styles =["Jazz", "Blues"];
+  let styleshalf= Math.floor(styles.length / 2);
+
+  styles.push("Rock-n-Roll");
+  styles[styleshalf] = "Classics";
+  console.log(styles);
+  console.log(styles.shift());
+  console.log(styles);
+  styles.unshift("Reggae");
+  styles.unshift("Rap");
+  console.log(styles);
+
+  let arr = [1, 2, 8, 3, 4, 9, 6, 7, 9, 6, 4];
+  console.log(arr);
+  let uniqueArr = arr
+  .sort((a, b) => a - b)
+  .filter((value, index, array) =>
+    value !== array[index - 1] && value !== array[index + 1]
+  );
+  
+console.log("Test");
+console.log(uniqueArr);
+
+ 
+  
+  function isEven(a) {
+   return a.filter((num) => num%2 === 0).map((num) => num * 3).reduce((acc, curr) => acc + curr);
+
+  }
+  console.log(isEven(arr));
+
+ 
+function filterRange(arr, a, b) {
+ return arr.filter(a1 => (a1 >= a && a1 <= b))
+};
+
+
+function filterRangeInPlace(arr, a, b) {
+ return arr.filter(a1 => (a1 >= a && a1 <= b))
+};
+
+function decreasing (arr) {
+  return arr.sort((a, b) => b - a);
+}
+let arr2 = arr.map(a =>a).sort();
+
+console.log(arr2);
+console.log(filterRangeInPlace(arr, 1, 5));
+
+
+</script>
+</body>
+</html>
